@@ -43,4 +43,4 @@ Here's an improved version of the description:
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
 
 ## Acknowledgements
-Thanks to [TheCatAPI](https://thecatapi.com/) for providing the images and gifs used in the game!
+Thanks to <a href="https://thecatapi.com/" target="_blank" rel="noopener noreferrer">TheCatAPI</a> for providing the images and gifs used in the game
