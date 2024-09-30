@@ -1,4 +1,4 @@
-# MeoMatch — Flip & Match the Cats 🐱🎴
+# MeoMatch: Flip & Match the Cats
 
 **MeoMatch** is a cat-themed memory game where players flip cards to match random cat images or gifs. It features local multiplayer for shared fun, score tracking, card shuffling for a fresh challenge each round, and a helpful guide to get started. You can also switch between light and dark themes.
 
