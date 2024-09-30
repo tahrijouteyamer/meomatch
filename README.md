@@ -11,7 +11,7 @@ Here's an improved version of the description:
 - 🔄 **Shuffle Cards**: Shuffle the deck for a fresh start.
 - 🌓 **Light/Dark Mode**: Toggle between black and white themes for a personalized look.
 
-## Getting Started*
+## Getting Started
 
 ### Prerequisites
 - **Node.js** (version 12.x or later)
