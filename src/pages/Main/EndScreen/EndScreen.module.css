@@ -1,0 +1,79 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  --color: var(--text-primary);
+  width: 100%;
+  height: 60%;
+  background: var(--color-primary);
+  padding: 3vw;
+}
+
+.container[data-variant="single"] {
+  --color: var(--text-primary);
+}
+
+.container[data-variant="player1"] {
+  --color: var(--color-red);
+}
+
+.container[data-variant="player2"] {
+  --color: var(--color-blue);
+}
+
+.innerCont {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 4px solid var(--color-tertiary);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--color);
+}
+
+.complete {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.content {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.btnCont {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    height: 70%;
+  }
+
+  .complete {
+    font-size: 25px;
+  }
+
+  .content {
+    font-size: 50px;
+  }
+
+  .btnCont {
+    flex-direction: column;
+  }
+}

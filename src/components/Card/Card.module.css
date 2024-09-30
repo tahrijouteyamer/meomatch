@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  position: relative;
+  height: 18vw;
+  width: 13vw;
+
+  min-height: 100px;
+  min-width: 75px;
+
+  max-height: 200px;
+  max-width: 150px;
+
+  perspective: 500px;
+  cursor: pointer;
+
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.container:hover {
+  transform: scale(1.12);
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.content[data-active="true"] {
+  transform: rotateY(0deg);
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--color-primary);
+  text-align: center;
+  font-size: 60px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  transform: rotateY(180deg);
+  padding: 14px 17px;
+}
+
+.back-pattern {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-tertiary);
+  border-radius: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 1700px) {
+  .container {
+    height: 11vw;
+    width: 8vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    height: 13vw;
+    width: 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 18vw;
+    width: 12vw;
+  }
+  .back {
+    padding: 8px;
+  }
+}
