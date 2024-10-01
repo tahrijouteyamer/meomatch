@@ -1,7 +1,7 @@
 # Meoʍatch: Flip & Match the Cats
 ![meomatch_readmepic](https://github.com/user-attachments/assets/72a58df0-f796-43d7-8315-13de73489907)
 
-**Meoʍatch** is a cat-themed memory game where players flip cards to match random cat images or gifs. It features local multiplayer for shared fun, score tracking, card shuffling for a fresh challenge each round, and a helpful guide to get started. You can also switch between light and dark themes.
+**Meoʍatch** is a cat-themed memory game where players flip cards to match random cat images or gifs. It features local multiplayer for shared fun, score tracking, card shuffling for a fresh challenge each round, and a helpful guide to get started. You can also switch between light and dark themes. Website also works well in mobile devices https://meomatch.netflify.app
 
 ## Features
 - 🐱 **Cat-Themed Matching**: Flip cards to match random cat images and gifs.
