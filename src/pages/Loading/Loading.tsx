@@ -21,20 +21,19 @@ export default function Loading() {
 
   const { cards } = useCardGame();
 
-  // useEffect(() => {
-  //   //Increase loading by 20 every 1 second, until it reaches 100
-  //   const interval = setInterval(() => {
-  //     setLoadingVal((prev) => {
-  //       if (prev < 100) return prev + 20;
-  //       return 100;
-  //     });
-  //   }, 1000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+     const interval = setInterval(() => {
+       setLoadingVal((prev) => {
+         if (prev < 100) return prev + 20;
+         return 100;
+       });
+     }, 1000);
+     return () => clearInterval(interval);
+   }, []);
 
-  // useEffect(() => {
-  //   setCurrentLoading(loadingVal);
-  // }, [loadingVal]);
+   useEffect(() => {
+     setCurrentLoading(loadingVal);
+   }, [loadingVal]);
 
   const isFinishedTutorial = useMemo(() => {
     return tutorialCards.filter((card) => card.isMatched === true).length === 2;
