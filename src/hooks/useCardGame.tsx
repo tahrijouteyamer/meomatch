@@ -109,7 +109,7 @@ export function useCardGame() {
 
   useEffect(() => {
     if (cards && cards.length > 0) {
-      //Check EndGame, but quite expensive
+      // Check EndGame, but quite expensive
       const isEndGame = cards.every((card) => card.isMatched === true);
       if (isEndGame) {
         setEndGame(true);
@@ -159,7 +159,7 @@ export function useCardTutorial() {
     setCards(MOCK_TUTORIAL);
   }, []);
 
-  //Side effects on every clicks
+  // Side effects on every clicks
   useEffect(() => {
     if (firstCard && secondCard) {
       setDisabledClick(true);
