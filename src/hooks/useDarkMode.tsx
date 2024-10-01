@@ -22,7 +22,6 @@ function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
   // Update darkMode if os prefers changes
   useUpdateEffect(() => {
     setDarkMode(isDarkOS);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDarkOS]);
 
   useEffect(() => {
@@ -34,7 +33,6 @@ function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
         root.dataset.theme = "light";
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDarkMode]);
 
   return {
