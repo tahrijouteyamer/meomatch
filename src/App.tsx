@@ -19,7 +19,7 @@ import { useEffect } from "react";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchOnWindowFocus: false, // default: true
+      refetchOnWindowFocus: false,
       cacheTime: 1000 * 60 * 60 * 24, // 24 hours
       staleTime: 1000 * 60 * 2, // 2 minutes
     },
@@ -62,8 +62,5 @@ function Layout({ children }: { children: React.ReactNode }) {
     setTheme(darkTheme);
   }, [darkTheme]);
   return (
-    <ReactLenis root>
-      <div className={styles.container}>{children}</div>
-    </ReactLenis>
   );
 }
