@@ -62,7 +62,7 @@ export function useCardGame() {
     handleCardClick(card);
   };
 
-  //Side effects on every clicks
+  // Side effects on every clicks
   useEffect(() => {
     if (firstCard && secondCard) {
       setDisabledClick(true);
@@ -91,11 +91,11 @@ export function useCardGame() {
             }
           }
         } else {
-          //If not match, flip back the cards
+          // If not match, flip back the cards
           setTimeout(() => {
             setDisabledClick(false);
             resetCardClicks();
-            //If Multiplayer, change the turn
+            // If Multiplayer, change the turn
             if (gameMode === "multi") {
               setCurrentPlayerTurn(
                 currentPlayer === "player1" ? "player2" : "player1"
