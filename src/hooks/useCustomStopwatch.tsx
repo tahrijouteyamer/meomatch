@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStopwatch } from "react-use-precision-timer";
 
+// Customized Stopwatch
 export default function useCustomStopwatch() {
   const [renderTime, setRenderTime] = useState(new Date().getTime());
   const stopwatch = useStopwatch();
