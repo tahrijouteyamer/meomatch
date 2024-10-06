@@ -19,7 +19,7 @@ function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
     defaultValue ?? isDarkOS ?? false
   );
 
-  // Update darkMode if os prefers changes
+  // Switch to Dark Mode 
   useUpdateEffect(() => {
     setDarkMode(isDarkOS);
   }, [isDarkOS]);
