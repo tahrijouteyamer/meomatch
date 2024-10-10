@@ -21,9 +21,7 @@ export default function Help() {
 
             <div
               data-lenis-prevent
-              className={styles.scrollCont}
-              // onWheel={(event) => event.stopPropagation()}
-            >
+              className={styles.scrollCont}>
               <h4 className={styles.title}>How to Play</h4>
               <p className={styles.descrip}>
                 In the memory card game, your objective is to identify pairs of

@@ -93,3 +93,13 @@
     padding: 8px;
   }
 }
+
+@media (max-width: 500px) {
+  .container {
+    height: 18vw;
+    width: 13vw;
+  }
+  .back {
+    padding: 8px;
+  }
+}
