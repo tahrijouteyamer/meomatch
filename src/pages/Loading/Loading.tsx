@@ -51,9 +51,8 @@ export default function Loading() {
           const img = new Image();
           img.onload = img.onerror = () => {
             loadedCount++;
-            // Calculate progress
             const currentProgress = (loadedCount / totalCount) * 100;
-            setCurrentLoading(Math.floor(currentProgress)); // Update progress state
+            setCurrentLoading(Math.floor(currentProgress));
             resolve();
           };
           img.src = url;
