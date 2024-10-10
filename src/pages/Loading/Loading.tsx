@@ -66,11 +66,8 @@ export default function Loading() {
           img.src = url;
         });
       }
-
-      // Map over the cards to preload images
       const preloadPromises = cards.map((card) => preloadImage(card.url));
 
-      // Using Promise.all to know when all images have been processed
       Promise.all(preloadPromises).then(() => {
         console.log("All images processed");
       });
