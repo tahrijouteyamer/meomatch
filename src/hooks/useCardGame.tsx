@@ -82,7 +82,6 @@ export function useCardGame() {
           setDisabledClick(false);
           resetCardClicks();
 
-          //If Multiplayer, add score to player
           if (gameMode === "multi") {
             if (currentPlayer === "player1") {
               setPlayer1Score(player1Score + 1);
@@ -109,7 +108,6 @@ export function useCardGame() {
 
   useEffect(() => {
     if (cards && cards.length > 0) {
-      // Check EndGame, but quite expensive
       const isEndGame = cards.every((card) => card.isMatched === true);
       if (isEndGame) {
         setEndGame(true);
@@ -133,7 +131,7 @@ export function useCardTutorial() {
 
   const setCards = useStore((state) => state.setTutorialCards);
 
-  // const handleCardClick = useStore((state) => state.handleCardClick);
+  const handleCardClick = useStore((state) => state.handleCardClick);
 
   const handleCardClick = (card: any) => {
     if (firstCard) {
