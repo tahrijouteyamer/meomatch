@@ -39,12 +39,6 @@ export default function Loading() {
     return tutorialCards.filter((card) => card.isMatched === true).length === 2;
   }, [tutorialCards]);
 
-  // useEffect(() => {
-  //   if (isFinishedTutorial) {
-  //   }
-  // }, [isFinishedTutorial]);
-
-  //Handling asset image loading
   useEffect(() => {
     if (!cards || cards.length === 0) return;
 
@@ -52,7 +46,6 @@ export default function Loading() {
       let loadedCount = 0;
       const totalCount = cards.length;
 
-      // Load image and return a promise
       function preloadImage(url: string) {
         return new Promise<void>((resolve) => {
           const img = new Image();
