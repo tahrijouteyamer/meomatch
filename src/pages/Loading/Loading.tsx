@@ -11,6 +11,8 @@ const FadeInVariant = {
   visible: { opacity: 1 },
 };
 
+let loadingVal = 0;
+
 export default function Loading() {
   const loading = useStore((state) => state.currentLoading);
   const setCurrentLoading = useStore((state) => state.setCurrentLoading);
