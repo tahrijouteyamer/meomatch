@@ -6,7 +6,6 @@ import useStore from "../../store/store";
 import { useCardGame, useCardTutorial } from "../../hooks/useCardGame";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Import GitHub logo, adjust the path if necessary
 import GitHubLogo from "../../assets/github-logo.svg";
 
 const FadeInVariant = {
