@@ -6,12 +6,13 @@ import useStore from "../../store/store";
 import { useCardGame, useCardTutorial } from "../../hooks/useCardGame";
 import { AnimatePresence, motion } from "framer-motion";
 
+// Import GitHub logo, adjust the path if necessary
+import GitHubLogo from "../../assets/github-logo.svg";
+
 const FadeInVariant = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
-
-let loadingVal = 0;
 
 export default function Loading() {
   const loading = useStore((state) => state.currentLoading);
@@ -20,22 +21,7 @@ export default function Loading() {
   const setGameMode = useStore((state) => state.setGameMode);
 
   const { onClickCard, cards: tutorialCards } = useCardTutorial();
-
   const { cards } = useCardGame();
-
-  useEffect(() => {
-     const interval = setInterval(() => {
-       setLoadingVal((prev) => {
-         if (prev < 100) return prev + 20;
-         return 100;
-       });
-     }, 1000);
-     return () => clearInterval(interval);
-   }, []);
-
-   useEffect(() => {
-     setCurrentLoading(loadingVal);
-   }, [loadingVal]);
 
   const isFinishedTutorial = useMemo(() => {
     return tutorialCards.filter((card) => card.isMatched === true).length === 2;
@@ -60,8 +46,8 @@ export default function Loading() {
           img.src = url;
         });
       }
-      const preloadPromises = cards.map((card) => preloadImage(card.url));
 
+      const preloadPromises = cards.map((card) => preloadImage(card.url));
       Promise.all(preloadPromises).then(() => {
         console.log("All images processed");
       });
@@ -101,9 +87,9 @@ export default function Loading() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                Find and match the same pair of cards, by click to flip the card
-                over. Try on the set above, or skip by choosing the game mode
-                below.
+                Find and match the same pair of cards, by clicking to flip the
+                card over. Try on the set above, or skip by choosing the game
+                mode below.
               </motion.p>
             )}
           </AnimatePresence>
@@ -142,6 +128,23 @@ export default function Loading() {
               </motion.span>
             )}
           </AnimatePresence>
+        </div>
+
+        {/* GitHub Link */}
+        <div className={styles.githubLink}>
+          <a
+            href="https://github.com/tahrijouteyamer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.githubAnchor}
+          >
+            <img
+              src={GitHubLogo}
+              alt="GitHub Logo"
+              className={styles.githubLogo}
+            />
+            Visit my GitHub
+          </a>
         </div>
       </div>
     </div>
